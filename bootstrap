@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-echo "## working directory"
-pwd
+echo "## Me"
+echo "$0"
 
 echo "##  Environment variables:"
 env
