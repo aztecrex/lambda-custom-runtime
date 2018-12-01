@@ -2,6 +2,12 @@
 
 set -euo pipefail
 
+echo "## working directory"
+pwd
+
+echo "##  Environment variables:"
+env
+
 # Initialization - load function handler
 source $LAMBDA_TASK_ROOT/"$(echo $_HANDLER | cut -d. -f1).sh"
 
@@ -19,3 +25,4 @@ do
   # Send the response
   curl -X POST "http://${AWS_LAMBDA_RUNTIME_API}/2018-06-01/runtime/invocation/$REQUEST_ID/response"  -d "$RESPONSE"
 done
+
