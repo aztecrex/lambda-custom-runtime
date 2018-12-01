@@ -5,6 +5,9 @@ set -euo pipefail
 echo "## Me"
 echo "$0"
 
+echo "## My Neighbors"
+ls -l "$(dirname $0)"
+
 echo "##  Environment variables:"
 env
 
