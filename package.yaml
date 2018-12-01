@@ -1,0 +1,43 @@
+name:                customrt
+version:             0.1.0.0
+github:              "githubuser/customrt"
+license:             BSD3
+author:              "Greg Wiley"
+maintainer:          "aztec.rex@jammm.com"
+copyright:           "2018 Greg Wiley"
+
+extra-source-files:
+- README.md
+
+
+description:         readme <https://github.com/aztecrex/customrt#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  customrt-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - customrt
+
+tests:
+  customrt-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - customrt
+
+

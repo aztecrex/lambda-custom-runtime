@@ -1,3 +1,5 @@
-*.zip
+.stack-work/
+customrt.cabal
+*~*.zip
 assume-*.shinc
 
